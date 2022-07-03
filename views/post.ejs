@@ -1,0 +1,16 @@
+<%- include("partials/header"); -%>
+<br>
+<br>
+<br>
+<br>
+<h1><%= title %></h1>
+<p><%= content %></p>
+<!-- <button class="btn btn-danger btn-lg pull-right" href="www.google.com">Edit</button> -->
+
+<div class = "edit">
+    <a class="btn btn-warning btn-lg pull-right" href="../../edit/<%= _id %>" role="button">Edit</a>
+</div>
+<form action="/delete" method="POST">
+    <button style="margin-top: 10px;" class="btn btn-info btn-lg" type="submit" name="postID" value=<%= _id %>>Delete</button>
+</form>
+<%- include("partials/footer"); -%>

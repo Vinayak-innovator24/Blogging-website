@@ -1,0 +1,27 @@
+<%- include("partials/header"); -%>
+
+<div class="homecontent">
+    <br>
+    <div class = "logout">
+        <a class="btn btn-danger btn-lg pull-right" href="/logout" role="button">Logout</a>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <div>
+        <p><%= home_Content %></p>
+    </div>
+
+    <% posts.forEach(function(post){ %>
+
+        <h3 class = "titlee"><%= post.title %></h3>
+        <p>
+        <%= post.content.substring(0, 100) + "..." %>
+        <a href ="/find/<%= post._id %>"> Read more</a>
+        </p>
+        
+    <% }) %>
+</div>
+
+<%- include("partials/footer"); -%>

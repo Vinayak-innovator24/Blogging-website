@@ -1,0 +1,23 @@
+<%- include("partials/header"); -%>
+<br>
+<br>
+<br>
+<br>
+    
+    <h1>Edit</h1>
+    <br>
+    <form action = "/compose" method = "POST">
+        <div class="form-group">
+            <input type="hidden" for="TitleId" class="form-control" name="postID" value=<%= _id %> ></input>
+            <br>
+            <label for="TitleArea"></label><b>Title</b></label>
+            <br>
+            <input type="text" class="form-control" name = "postTitle" placeholder = "enter title" value=<%= title %>>
+            <br>
+            <label for="PostArea">Content</label>
+            <textarea class="form-control" name = "postBody" rows="5" cols="50"><%= content %></textarea>
+        </div>
+        <button type="submit" class="btn btn-info btn-lg">Edit</button>
+    </form>
+    
+<%- include("partials/footer"); -%>

@@ -127,7 +127,6 @@ app.post("/compose", function(req, res){
   
 });
 
-
 app.post("/delete", function(req, res){
   Post.findOneAndDelete({_id: req.body.postID}, function(err) {
     res.redirect("/home");
@@ -246,6 +245,6 @@ app.post("/login", function(req, res){
   });
 });
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server started on port 3000");
 });

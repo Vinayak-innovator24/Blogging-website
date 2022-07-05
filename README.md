@@ -1,4 +1,4 @@
-# Blogging-website
+Blogging-website
 
 This is a website which is protected by authentication system which uses sessions and cookies using Passport.js. Here, users can create, edit as well as completely remove a post depending on their need. This website has five subsections: 
 1. Home

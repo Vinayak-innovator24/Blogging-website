@@ -1,11 +1,12 @@
 # Blogging-website
 
-### This is a website which is protected by authentication system which uses sessions and cookies using Passport.js. Here, users can create, edit as well as completely remove a post depending on their need. This website has five subsections: 
+<p> This is a website which is protected by authentication system which uses sessions and cookies using Passport.js. Here, users can create, edit as well as completely remove a post depending on their need. This website has five subsections: </p>
 
 ## Features
     1. User Registeration
     2. User Authentication & Authorization
-    3. 
+    3. Compose/ Edit/ Delete POST
+
 ## Pages
     1. Home
     2. About us
@@ -13,7 +14,7 @@
     4. Terms & Conditions
     5. Contact us
 
-### Any of this subsection is only accessed when user has logged in to the website.
+<p> Any of this subsection is only accessed when user has logged in to the website.  </p>
 
 ## Technologies used:
     1. ExpressJS (A NodeJS Framework)

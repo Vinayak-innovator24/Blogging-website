@@ -32,7 +32,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/userDB");
+mongoose.connect("mongodb+srv://vin-mongo:database4me@cluster0.i4q6ckv.mongodb.net/userDB");
 
 
 const random = (length = 8) => {

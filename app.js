@@ -11,7 +11,7 @@ const session = require("express-session");
 const passport = require("passport");
 const PassportLocalMongoose = require("passport-local-mongoose");
 
-const homeStartingContent = "This is a blogging website built using mainly ExpressJs, MongoDB and core javascript. HTML and CSS are also added wherever required. It may not look much beautiful but it is fully functional. ";
+const homeStartingContent = "This is a blogging website built using mainly ExpressJs, MongoDB and core javascript. HTML and CSS are also added wherever required. This website is protected by authentication system which uses sessions and cookies using Passport.js. ";
 const aboutContent = "WordPress started in 2003 when Mike Little and Matt Mullenweg created a fork of b2/cafelog. The need for an elegant, well-architected personal publishing system was clear even then. Today, WordPress is built on PHP and MySQL, and licensed under the GPLv2. It is also the platform of choice for over 43% of all sites across the web.The WordPress open source project has evolved in progressive ways over time — supported by skilled, enthusiastic developers, designers, scientists, bloggers, and more. WordPress provides the opportunity for anyone to create and share, from handcrafted personal anecdotes to world-changing movements. People with a limited tech experience can use it “out of the box”, and more tech-savvy folks can customize it in remarkable ways.";
 const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.";
 const termsContent = "Like most website operators, WordPress.org collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. WordPress.org’s purpose in collecting non-personally identifying information is to better understand how WordPress.org’s visitors use its website. From time to time, WordPress.org may release non-personally-identifying information in the aggregate, e.g., by publishing a report on trends in the usage of its website.WordPress.org also collects potentially personally-identifying information like Internet Protocol (IP) addresses. WordPress.org does not use IP addresses to identify its visitors, however, and does not disclose such information, other than under the same circumstances that it uses and discloses personally-identifying information, as described below.";
@@ -32,7 +32,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://vin-mongo:database4me@cluster0.i4q6ckv.mongodb.net/userDB");
+mongoose.connect(`mongodb+srv://${process.env.user}:${process.env.password}@cluster0.v7qiaaj.mongodb.net/test`);
 
 
 const random = (length = 8) => {

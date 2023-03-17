@@ -4,8 +4,6 @@ require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const _ = require("lodash");
-
 const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
@@ -32,7 +30,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(`mongodb+srv://${process.env.user}:${process.env.password}@cluster0.v7qiaaj.mongodb.net/test`);
+mongoose.connect(`mongodb+srv://${process.env.user}:${process.env.password}@cluster2.s6fchid.mongodb.net/?retryWrites=true&w=majority`);
 
 
 const random = (length = 8) => {
